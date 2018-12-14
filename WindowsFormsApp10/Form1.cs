@@ -101,6 +101,8 @@ namespace WindowsFormsApp10
             SqlCommand cmd = new SqlCommand(sql, con);
 
             SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows) { 
+
             while (reader.Read())
             {
                 label5.Text = reader.GetString(0);
@@ -109,6 +111,8 @@ namespace WindowsFormsApp10
 
 
             }
+            }
+            else { MessageBox.Show("Please insert a valid HU"); }
 
 
             con.Close();
@@ -123,15 +127,19 @@ namespace WindowsFormsApp10
             SqlCommand cmd = new SqlCommand(sql, con);
 
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (reader.HasRows)
             {
-                label7.Text = reader.GetString(0);
-                label11.Text = reader.GetString(1);
-                label15.Text = reader.GetDouble(2).ToString();
+                while (reader.Read())
+                {
+                    label7.Text = reader.GetString(0);
+                    label11.Text = reader.GetString(1);
+                    label15.Text = reader.GetDouble(2).ToString();
 
 
+                }
             }
 
+            else { MessageBox.Show("Please insert a valid HU"); }
 
             con.Close();
 
@@ -145,16 +153,20 @@ namespace WindowsFormsApp10
             SqlCommand cmd = new SqlCommand(sql, con);
 
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            
+                if (reader.HasRows)
             {
-                label9.Text = reader.GetString(0);
-                label12.Text = reader.GetString(1);
-                label16.Text = reader.GetDouble(2).ToString();
+                while (reader.Read())
+                {
+                    label9.Text = reader.GetString(0);
+                    label12.Text = reader.GetString(1);
+                    label16.Text = reader.GetDouble(2).ToString();
 
 
+                }
             }
 
-
+            else { MessageBox.Show("Please insert a valid HU"); }
             con.Close();
 
         }
@@ -167,14 +179,17 @@ namespace WindowsFormsApp10
             SqlCommand cmd = new SqlCommand(sql, con);
 
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (reader.HasRows)
             {
-                label8.Text = reader.GetString(0);
-                label13.Text = reader.GetString(1);
-                label17.Text = reader.GetDouble(2).ToString();
+                while (reader.Read())
+                {
+                    label8.Text = reader.GetString(0);
+                    label13.Text = reader.GetString(1);
+                    label17.Text = reader.GetDouble(2).ToString();
+                }
+
             }
-
-
+            else { MessageBox.Show("Please insert a valid HU"); }
             con.Close();
 
         }
