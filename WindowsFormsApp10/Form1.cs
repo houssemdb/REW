@@ -223,7 +223,7 @@ namespace WindowsFormsApp10
             con.Open();
             MessageBox.Show("conection ok");
 
-            string sql = @"INSERT INTO dbo.Rew_output (Huidout,itemout,qtyout,huidin1,qtyin1,huidin2,qtyin2,huidin3,qtyin3,dtime) VALUES (" + textBox4.Text + "," + label8.Text + "," + label17.Text + "," + textBox1.Text + "," + label14.Text + "," + textBox2.Text + "," + label15.Text + "," + textBox3.Text + "," + label16.Text + ",GETDATE());";
+            string sql = @"INSERT INTO dbo.Rew_output (Huidout,itemout,qtyout,huidin1,qtyin1,huidin2,qtyin2,huidin3,qtyin3,dtime) VALUES (" + (string)textBox4.Text + "," + label8.Text + "," + label17.Text + "," + (string)textBox1.Text + "," + label14.Text + "," + (string)textBox2.Text + "," + label15.Text + "," + (string)textBox3.Text + "," + label16.Text + ", GETDATE());";
 
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.ExecuteNonQuery();

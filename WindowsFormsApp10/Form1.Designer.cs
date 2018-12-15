@@ -61,6 +61,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "EMPTY";
             this.textBox1.Leave += new System.EventHandler(this.label4_Click);
             // 
             // textBox2
@@ -69,6 +70,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "EMPTY";
             this.textBox2.Leave += new System.EventHandler(this.label5_Click);
             // 
             // textBox3
@@ -77,6 +79,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 2;
+            this.textBox3.Text = "EMPTY";
             this.textBox3.Leave += new System.EventHandler(this.label6_Click);
             // 
             // textBox4
@@ -85,6 +88,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 3;
+            this.textBox4.Text = "EMPTY";
             this.textBox4.Leave += new System.EventHandler(this.label7_Click);
             // 
             // label1
